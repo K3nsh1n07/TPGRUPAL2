@@ -41,15 +41,15 @@
                     <td><label class="preferencias">Turno</label></td>
                     <td colspan="3">
                         <asp:DropDownList id="sTurnos" class="desenfocada" runat="server">
-                            <asp:ListItem>Seleccione Turno</asp:ListItem> 
-                            <asp:ListItem>Mañana</asp:ListItem> 
-                            <asp:ListItem>Tarde</asp:ListItem> 
-                            <asp:ListItem>Noche</asp:ListItem> 
+                            <asp:ListItem Text="Seleccione Turno" />
+                            <asp:ListItem Text="Mañana" />
+                            <asp:ListItem Text="Tarde" />
+                            <asp:ListItem Text="Noche" />
                         </asp:DropDownList></td>
                 </tr>
                 <tr>
                     <td colspan="5" align="right">                   
-                        <asp:Button id="Enviar" Text="Enviar"  runat="server" OnClick="Button1_Click"/><asp:Button id="limpiar" OnClientClick="this.form.reset();return false;" Text="Limpiar" runat="server" />
+                        <asp:Button id="Enviar" Text="Enviar"  runat="server" OnClick="Button1_Click" OnClientClick="return validarForm()"/><asp:Button id="limpiar" OnClientClick="this.form.reset();return false;" Text="Limpiar" runat="server" />
                     </td>
                 </tr>
             </table>
