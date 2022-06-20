@@ -45,7 +45,8 @@
                             <asp:ListItem Text="Mañana" />
                             <asp:ListItem Text="Tarde" />
                             <asp:ListItem Text="Noche" />
-                        </asp:DropDownList></td>
+                        </asp:DropDownList>
+                    </td>
                 </tr>
                 <tr>
                     <td colspan="5" align="right">                   

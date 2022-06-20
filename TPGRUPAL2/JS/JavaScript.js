@@ -4,12 +4,10 @@
     var regex2 = new RegExp(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/)//expresion regular para validar correo
     var regex3 = new RegExp(/^[0-9]{7,8}$/); //expresion regular para validar solo números
 
-
     function validaApellido() {
-
+        
         var your_surname = document.getElementById("tapellido").value;
-
-        if (regex.test(your_surname) && (your_surname != "null")) {
+        if (your_surname != "") {
             return true;
         }
         else {
@@ -22,7 +20,7 @@
 
         var your_name = document.getElementById("tnombre").value;
 
-        if (regex.test(your_name) && (your_name != "null")) {
+        if (your_name != "") {
             return true;
         }
         else {
@@ -35,7 +33,7 @@
 
         var your_dni = document.getElementById("tdni").value;
 
-        if (regex3.test(your_dni) && (your_dni != "null") && (your_dni > 0 && your_dni <= 99999999)) {
+        if (regex3.test(your_dni) && (your_dni != "") && (your_dni > 0 && your_dni <= 99999999)) {
             return true;
         }
         else {
@@ -48,7 +46,7 @@
 
         var your_email = document.getElementById("temail").value;
 
-        if (regex2.test(your_email) && (your_email != "null")) {
+        if (regex2.test(your_email) && (your_email != "")) {
             return true;
         }
         else {
